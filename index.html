@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MA BOUTIQUE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span>MA</span> BOUTIQUE
+        </div>
+
+        <nav class="menu">
+            <a href="#">Accueil</a>
+            <a href="#produits">Produits</a>
+            <a href="#categories">Catégories</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button id="searchBtn" class="icon-btn">
+                🔍
+            </button>
+
+            <button id="cartBtn" class="cart-btn">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                BIENVENUE DANS
+            </p>
+
+            <h1>
+                MA <span>BOUTIQUE</span>
+            </h1>
+
+            <p>
+                Découvrez nos produits modernes,
+                élégants et accessibles.
+            </p>
+
+            <a href="#produits" class="hero-btn">
+                Découvrir les produits
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="categories">
+
+        <h2>Nos catégories</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <div class="category-icon">📱</div>
+                <h3>Smartphones</h3>
+                <p>Téléphones modernes</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">💻</div>
+                <h3>Ordinateurs</h3>
+                <p>PC et ordinateurs portables</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🎧</div>
+                <h3>Accessoires</h3>
+                <p>Accessoires électroniques</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUITS -->
+    <section id="produits" class="products">
+
+        <div class="section-title">
+
+            <p>NOTRE COLLECTION</p>
+
+            <h2>Nos produits</h2>
+
+        </div>
+
+
+        <div class="product-container">
+
+
+            <!-- PRODUIT 1 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+                        Nouveau
+                    </span>
+
+                    <img
+                        src="images/smartphone.png"
+                        alt="Smartphone Premium"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Smartphone
+                    </p>
+
+                    <h3>
+                        Smartphone Premium
+                    </h3>
+
+                    <p class="description">
+                        Smartphone moderne avec
+                        écran haute qualité.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            89 900 DA
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Smartphone Premium"
+                            data-price="89900"
+                        >
+                            Ajouter 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUIT 2 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+                        Promo
+                    </span>
+
+                    <img
+                        src="images/smartphone2.png"
+                        alt="Smartphone Pro"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Smartphone
+                    </p>
+
+                    <h3>
+                        Smartphone Pro
+                    </h3>
+
+                    <p class="description">
+                        Puissant, rapide et élégant
+                        pour votre quotidien.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            74 900 DA
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Smartphone Pro"
+                            data-price="74900"
+                        >
+                            Ajouter 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUIT 3 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+                        Nouveau
+                    </span>
+
+                    <img src="images/laptop.png" alt="Laptop Business">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Ordinateur
+                    </p>
+
+                    <h3>
+                        Laptop Business
+                    </h3>
+
+                    <p class="description">
+                        Ordinateur portable rapide
+                        pour le travail.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            129 900 DA
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Laptop Business"
+                            data-price="129900"
+                        >
+                            Ajouter 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUIT 4 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+                        Promo
+                    </span>
+
+                    <img src="images/casque.png" alt="Casque Bluetooth">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Audio
+                    </p>
+
+                    <h3>
+                        Casque Bluetooth
+                    </h3>
+
+                    <p class="description">
+                        Son clair, basses puissantes
+                        et grande autonomie.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            12 900 DA
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Casque Bluetooth"
+                            data-price="12900"
+                        >
+                            Ajouter 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUIT 5 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+                        Populaire
+                    </span>
+
+                    <img src="images/smartwatch.png" alt="Smart Watch">
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Accessoire
+                    </p>
+
+                    <h3>
+                        Smart Watch
+                    </h3>
+
+                    <p class="description">
+                        Montre intelligente avec
+                        plusieurs fonctionnalités.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                             900 DA
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Smart Watch"
+                            data-price="19900"
+                        >
+                            Ajouter 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUIT 6 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+                        Nouveau
+                    </span>
+
+                    <img src="images/manette.png" alt="Manette Gaming">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Gaming
+                    </p>
+
+                    <h3>
+                        Manette Gaming
+                    </h3>
+
+                    <p class="description">
+                        Manette sans fil pour
+                        vos sessions gaming.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            9 900 DA
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Manette Gaming"
+                            data-price="9900"
+                        >
+                            Ajouter 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUIT 7 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+                        Promo
+                    </span>
+
+                    <img src="images/enceinte.png" alt="Enceinte Bluetooth">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Audio
+                    </p>
+
+                    <h3>
+                        Enceinte Bluetooth
+                    </h3>
+
+                    <p class="description">
+                        Enceinte compacte avec
+                        un son puissant.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            8 900 DA
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Enceinte Bluetooth"
+                            data-price="8900"
+                        >
+                            Ajouter 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUIT 8 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+                        Populaire
+                    </span>
+
+                    <img src="images/chargeur.png" alt="Chargeur Rapide">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Accessoire
+                    </p>
+
+                    <h3>
+                        Chargeur Rapide
+                    </h3>
+
+                    <p class="description">
+                        Chargeur rapide compatible
+                        avec plusieurs appareils.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            4 900 DA
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Chargeur Rapide"
+                            data-price="4900"
+                        >
+                            Ajouter 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROMOTION -->
+    <section class="promotion">
+
+        <div>
+
+            <p>
+                OFFRE LIMITÉE
+            </p>
+
+            <h2>
+                Jusqu'à -30% sur certains produits
+            </h2>
+
+            <p>
+                Profitez de nos promotions
+                avant leur expiration.
+            </p>
+
+        </div>
+
+        <a href="#produits">
+            Voir les offres
+        </a>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <div class="contact-content">
+
+            <p>
+                BESOIN D'AIDE ?
+            </p>
+
+            <h2>
+                Contactez-nous
+            </h2>
+
+            <p>
+                Notre équipe est disponible pour
+                répondre à vos questions.
+            </p>
+
+            <button id="contactBtn">
+                Nous contacter
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            MA BOUTIQUE
+        </div>
+
+        <p>
+            © 2026 MA BOUTIQUE — Tous droits réservés.
+        </p>
+
+    </footer>
+
+
+    <!-- PANIER -->
+    <div id="cartPanel" class="cart-panel">
+
+        <div class="cart-header">
+
+            <h2>
+                Mon panier
+            </h2>
+
+            <button id="closeCart">
+                ✕
+            </button>
+
+        </div>
+
+        <div id="cartItems" class="cart-items">
+
+            <p class="empty-cart">
+                Votre panier est vide.
+            </p>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="total">
+
+                <span>
+                    Total :
+                </span>
+
+                <strong id="cartTotal">
+                    0 DA
+                </strong>
+
+            </div>
+
+            <button id="checkoutBtn">
+                Commander
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- OVERLAY -->
+    <div id="overlay" class="overlay"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
