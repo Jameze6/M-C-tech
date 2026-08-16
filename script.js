@@ -316,12 +316,21 @@ if (contactBtn) {
 
     contactBtn.addEventListener("click", () => {
 
-        alert(
-           "📞 Téléphone : 0555 29 61 76\n\n" +
+        const instagram =
+            "https://www.instagram.com/m_c.technology?igsh=amI2YjA4NGtraHV3";
+
+        const message =
+            "📞 Téléphone : 0555 29 61 76\n\n" +
             "📱 WhatsApp : 0555 29 61 76\n\n" +
-            "📧 Email : hridjou@gmail.com"
+            "📧 Email : hridjou@gmail.com\n\n" +
             "📷 Instagram : m_c.technology";
-        );
+
+        const ouvrirInstagram =
+            confirm(message + "\n\nOuvrir notre Instagram ?");
+
+        if (ouvrirInstagram) {
+            window.location.href = instagram;
+        }
 
     });
 
