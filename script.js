@@ -25,10 +25,12 @@ const checkoutBtn = document.getElementById("checkoutBtn");
 // OUVRIR LE PANIER
 // ===============================
 
-cartBtn.addEventListener("click", () => {
-    cartPanel.classList.add("active");
-    overlay.classList.add("active");
-});
+if (cartBtn) {
+    cartBtn.addEventListener("click", () => {
+        cartPanel.classList.add("active");
+        overlay.classList.add("active");
+    });
+}
 
 
 // ===============================
@@ -40,8 +42,13 @@ function closeCartPanel() {
     overlay.classList.remove("active");
 }
 
-closeCart.addEventListener("click", closeCartPanel);
-overlay.addEventListener("click", closeCartPanel);
+if (closeCart) {
+    closeCart.addEventListener("click", closeCartPanel);
+}
+
+if (overlay) {
+    overlay.addEventListener("click", closeCartPanel);
+}
 
 
 // ===============================
@@ -77,9 +84,14 @@ addButtons.forEach((button) => {
 
         updateCart();
 
-        // Ouvre automatiquement le panier
-        cartPanel.classList.add("active");
-        overlay.classList.add("active");
+        // Ouvrir automatiquement le panier
+        if (cartPanel) {
+            cartPanel.classList.add("active");
+        }
+
+        if (overlay) {
+            overlay.classList.add("active");
+        }
 
     });
 
@@ -91,6 +103,8 @@ addButtons.forEach((button) => {
 // ===============================
 
 function updateCart() {
+
+    if (!cartItems) return;
 
     cartItems.innerHTML = "";
 
@@ -108,8 +122,13 @@ function updateCart() {
             </p>
         `;
 
-        cartCount.textContent = "0";
-        cartTotal.textContent = "0 DA";
+        if (cartCount) {
+            cartCount.textContent = "0";
+        }
+
+        if (cartTotal) {
+            cartTotal.textContent = "0 DA";
+        }
 
         return;
     }
@@ -151,7 +170,6 @@ function updateCart() {
             </button>
         `;
 
-
         cartItems.appendChild(item);
 
     });
@@ -159,10 +177,14 @@ function updateCart() {
 
     // TOTAL
 
-    cartCount.textContent = totalQuantity;
+    if (cartCount) {
+        cartCount.textContent = totalQuantity;
+    }
 
-    cartTotal.textContent =
-        total.toLocaleString("fr-FR") + " DA";
+    if (cartTotal) {
+        cartTotal.textContent =
+            total.toLocaleString("fr-FR") + " DA";
+    }
 
 
     // ===============================
@@ -171,7 +193,6 @@ function updateCart() {
 
     const removeButtons =
         document.querySelectorAll(".remove-item");
-
 
     removeButtons.forEach((button) => {
 
@@ -202,86 +223,86 @@ const whatsappNumber = "213555296176";
 // COMMANDER
 // ===============================
 
-checkoutBtn.addEventListener("click", () => {
+if (checkoutBtn) {
 
-    // Vérifier si le panier est vide
+    checkoutBtn.addEventListener("click", () => {
 
-    if (cart.length === 0) {
+        // Vérifier si le panier est vide
 
-        alert("Votre panier est vide.");
+        if (cart.length === 0) {
 
-        return;
-    }
+            alert("Votre panier est vide.");
 
-
-    // ===============================
-    // CRÉER LE MESSAGE
-    // ===============================
-
-    let message =
-        "🛒 NOUVELLE COMMANDE - MA BOUTIQUE\n\n";
+            return;
+        }
 
 
-    let total = 0;
+        // ===============================
+        // CRÉER LE MESSAGE
+        // ===============================
+
+        let message =
+            "🛒 NOUVELLE COMMANDE - M-C TECH\n\n";
+
+        let total = 0;
 
 
-    cart.forEach((product) => {
+        cart.forEach((product) => {
 
-        const productTotal =
-            product.price * product.quantity;
+            const productTotal =
+                product.price * product.quantity;
 
-        total += productTotal;
+            total += productTotal;
+
+
+            message +=
+                "📦 Produit : " + product.name + "\n" +
+                "🔢 Quantité : " + product.quantity + "\n" +
+                "💵 Prix : " +
+                productTotal.toLocaleString("fr-FR") +
+                " DA\n\n";
+
+        });
 
 
         message +=
-            "📦 " + product.name + "\n" +
-            "Quantité : " + product.quantity + "\n" +
-            "Prix : " +
-            productTotal.toLocaleString("fr-FR") +
+            "💰 TOTAL : " +
+            total.toLocaleString("fr-FR") +
             " DA\n\n";
+
+
+        message +=
+            "Bonjour, je souhaite confirmer cette commande. Merci.";
+
+
+        // ===============================
+        // ENCODER LE MESSAGE
+        // ===============================
+
+        const encodedMessage =
+            encodeURIComponent(message);
+
+
+        // ===============================
+        // LIEN WHATSAPP
+        // ===============================
+
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodedMessage;
+
+
+        // ===============================
+        // OUVRIR WHATSAPP
+        // ===============================
+
+        window.location.href = whatsappURL;
 
     });
 
-
-    message +=
-        "💰 TOTAL : " +
-        total.toLocaleString("fr-FR") +
-        " DA\n\n";
-
-
-    message +=
-        "Bonjour, je souhaite confirmer cette commande. Merci.";
-
-
-    // ===============================
-    // ENCODER LE MESSAGE
-    // ===============================
-
-    const encodedMessage =
-        encodeURIComponent(message);
-
-
-    // ===============================
-    // LIEN WHATSAPP
-    // ===============================
-
-    const whatsappURL =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodedMessage;
-
-
-    // ===============================
-    // OUVRIR WHATSAPP
-    // ===============================
-
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
-
-});
+}
 
 
 // ===============================
@@ -386,14 +407,35 @@ if (searchBtn) {
 // ===============================
 
 updateCart();
+
+
+// ===============================
+// SERVICE WORKER
+// ===============================
+
 if ("serviceWorker" in navigator) {
+
     window.addEventListener("load", () => {
-        navigator.serviceWorker.register("/M-C-tech/service-worker.js")
-            .then(() => {
-                console.log("Service Worker activé");
-            })
-            .catch(error => {
-                console.error("Erreur Service Worker :", error);
-            });
+
+        navigator.serviceWorker.register(
+            "/M-C-tech/service-worker.js"
+        )
+        .then(() => {
+
+            console.log(
+                "Service Worker activé"
+            );
+
+        })
+        .catch(error => {
+
+            console.error(
+                "Erreur Service Worker :",
+                error
+            );
+
+        });
+
     });
+
 }
