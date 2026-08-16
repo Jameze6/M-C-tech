@@ -317,7 +317,9 @@ if (contactBtn) {
     contactBtn.addEventListener("click", () => {
 
         alert(
-            "Merci de nous contacter !"
+           "📞 Téléphone : 0555 29 61 76\n\n" +
+            "📱 WhatsApp : 0555 29 61 76\n\n" +
+            "📧 Email : hridjou@gmail.com"
         );
 
     });
