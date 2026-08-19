@@ -451,3 +451,16 @@ if ("serviceWorker" in navigator) {
     });
 
 }
+// ===== INTRO VIDEO MC TECHNO =====
+
+const introVideo = document.getElementById("intro-video");
+
+setTimeout(() => {
+    if (introVideo) {
+        introVideo.classList.add("hide");
+
+        setTimeout(() => {
+            introVideo.remove();
+        }, 700);
+    }
+}, 36000);
