@@ -1397,3 +1397,63 @@ video {
 .product-card {
     animation: fadeUp 0.6s ease both;
 }
+/* =========================================================
+   FOND MOBILE - IDENTIQUE AU PC
+========================================================= */
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        background:
+            radial-gradient(
+                circle at 10% 15%,
+                rgba(0, 119, 255, 0.30),
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 90% 80%,
+                rgba(0, 200, 255, 0.25),
+                transparent 38%
+            ),
+            linear-gradient(
+                135deg,
+                #020817 0%,
+                #071A3D 45%,
+                #031B35 72%,
+                #010B1C 100%
+            ) !important;
+
+        background-attachment: scroll !important;
+        min-height: 100%;
+    }
+
+    body::before {
+        width: 300px;
+        height: 300px;
+
+        top: -100px;
+        left: -100px;
+
+        background: rgba(0, 110, 255, 0.65);
+
+        opacity: 0.45;
+
+        filter: blur(80px);
+    }
+
+    body::after {
+        width: 300px;
+        height: 300px;
+
+        right: -100px;
+        bottom: -100px;
+
+        background: rgba(0, 200, 255, 0.55);
+
+        opacity: 0.40;
+
+        filter: blur(80px);
+    }
+
+}
