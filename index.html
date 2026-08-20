@@ -12,32 +12,11 @@
 </head>
 
 <body>
-   <!-- INTRO VIDÉO MC TECHNO -->
-<section class="intro-video" id="intro-video">
 
-    <video id="introVideo" autoplay muted playsinline>
-        <source src="videos/intro.mp4" type="video/mp4">
-    </video>
+    <!-- ======================================
+         HEADER
+    ======================================= -->
 
-</section>
-
-        <p class="loading-text">
-            MC TECHNO
-        </p>
-
-    </div>
-
-</section>
- 
-        <p class="loading-text">
-            INITIALISATION...
-        </p>
-
-    </div>
-
-</div>
-
-    <!-- HEADER -->
     <header class="header">
 
         <div class="logo">
@@ -67,14 +46,21 @@
     </header>
 
 
-    <!-- HERO -->
+    <!-- ======================================
+         HERO AVEC VIDÉO EN ARRIÈRE-PLAN
+    ======================================= -->
+
     <section class="hero">
+
         <video class="hero-video" autoplay muted loop playsinline>
-    <source src="videos/intro.mp4" type="video/mp4">
-</video>
+            <source src="videos/intro.mp4" type="video/mp4">
+        </video>
+
+        <!-- Voile sombre sur la vidéo -->
+        <div class="hero-overlay"></div>
 
         <div class="hero-content">
-    
+
             <p class="small-title">
                 BIENVENUE CHEZ
             </p>
@@ -97,37 +83,45 @@
     </section>
 
 
-    <!-- CATEGORIES -->
+    <!-- ======================================
+         CATEGORIES
+    ======================================= -->
+
     <section id="categories" class="categories">
 
         <h2>Nos catégories</h2>
+        <button class="category-all" data-category="all">
+    🛍️ Tous les produits
+</button>
+<div class="category-container">
 
-        <div class="category-container">
+    <div class="category-card" data-category="smartphones">
+        <div class="category-icon">📱</div>
+        <h3>Smartphones</h3>
+        <p>Téléphones modernes</p>
+    </div>
 
-            <div class="category-card">
-                <div class="category-icon">📱</div>
-                <h3>Smartphones</h3>
-                <p>Téléphones modernes</p>
-            </div>
+    <div class="category-card" data-category="ordinateurs">
+        <div class="category-icon">💻</div>
+        <h3>Ordinateurs</h3>
+        <p>PC et ordinateurs portables</p>
+    </div>
 
-            <div class="category-card">
-                <div class="category-icon">💻</div>
-                <h3>Ordinateurs</h3>
-                <p>PC et ordinateurs portables</p>
-            </div>
+    <div class="category-card" data-category="accessoires">
+        <div class="category-icon">🎧</div>
+        <h3>Accessoires</h3>
+        <p>Accessoires électroniques</p>
+    </div>
 
-            <div class="category-card">
-                <div class="category-icon">🎧</div>
-                <h3>Accessoires</h3>
-                <p>Accessoires électroniques</p>
-            </div>
-
-        </div>
+</div>
 
     </section>
 
 
-    <!-- PRODUITS -->
+    <!-- ======================================
+         PRODUITS
+    ======================================= -->
+
     <section id="produits" class="products">
 
         <div class="section-title">
@@ -143,7 +137,8 @@
 
 
             <!-- PRODUIT 1 -->
-            <div class="product-card">
+
+            <div class="product-card" data-category="smartphones">
 
                 <div class="product-image">
 
@@ -176,7 +171,7 @@
                     <div class="product-bottom">
 
                         <strong>
-                            89 900 DA
+                            74 900 DA
                         </strong>
 
                         <button
@@ -195,9 +190,10 @@
 
 
             <!-- PRODUIT 2 -->
+
             <div class="product-card">
 
-                <div class="product-image">
+                <div class="product-card" data-category="smartphones">
 
                     <span class="badge">
                         Promo
@@ -247,7 +243,8 @@
 
 
             <!-- PRODUIT 3 -->
-            <div class="product-card">
+
+            <div class="product-card" data-category="ordinateurs">
 
                 <div class="product-image">
 
@@ -255,7 +252,10 @@
                         Nouveau
                     </span>
 
-                    <img src="images/laptop.png" alt="Laptop Business">
+                    <img
+                        src="images/laptop.png"
+                        alt="Laptop Business"
+                    >
 
                 </div>
 
@@ -296,7 +296,8 @@
 
 
             <!-- PRODUIT 4 -->
-            <div class="product-card">
+
+            <div class="product-card" data-category="accessoires">
 
                 <div class="product-image">
 
@@ -304,7 +305,10 @@
                         Promo
                     </span>
 
-                    <img src="images/casque.png" alt="Casque Bluetooth">
+                    <img
+                        src="images/casque.png"
+                        alt="Casque Bluetooth"
+                    >
 
                 </div>
 
@@ -345,7 +349,8 @@
 
 
             <!-- PRODUIT 5 -->
-            <div class="product-card">
+
+            <div class="product-card" data-category="accessoires">
 
                 <div class="product-image">
 
@@ -353,7 +358,11 @@
                         Populaire
                     </span>
 
-                    <img src="images/smartwatch.png" alt="Smart Watch">
+                    <img
+                        src="images/smartwatch.png"
+                        alt="Smart Watch"
+                    >
+
                 </div>
 
                 <div class="product-info">
@@ -374,7 +383,7 @@
                     <div class="product-bottom">
 
                         <strong>
-                             900 DA
+                            900 DA
                         </strong>
 
                         <button
@@ -393,7 +402,8 @@
 
 
             <!-- PRODUIT 6 -->
-            <div class="product-card">
+
+            <div class="product-card" data-category="accessoires">
 
                 <div class="product-image">
 
@@ -401,7 +411,10 @@
                         Nouveau
                     </span>
 
-                    <img src="images/manette.png" alt="Manette Gaming">
+                    <img
+                        src="images/manette.png"
+                        alt="Manette Gaming"
+                    >
 
                 </div>
 
@@ -442,7 +455,8 @@
 
 
             <!-- PRODUIT 7 -->
-            <div class="product-card">
+
+            <div class="product-card" data-category="accessoires">
 
                 <div class="product-image">
 
@@ -450,7 +464,10 @@
                         Promo
                     </span>
 
-                    <img src="images/enceinte.png" alt="Enceinte Bluetooth">
+                    <img
+                        src="images/enceinte.png"
+                        alt="Enceinte Bluetooth"
+                    >
 
                 </div>
 
@@ -491,7 +508,8 @@
 
 
             <!-- PRODUIT 8 -->
-            <div class="product-card">
+
+            <div class="product-card" data-category="accessoires">
 
                 <div class="product-image">
 
@@ -499,7 +517,10 @@
                         Populaire
                     </span>
 
-                    <img src="images/chargeur.png" alt="Chargeur Rapide">
+                    <img
+                        src="images/chargeur.png"
+                        alt="Chargeur Rapide"
+                    >
 
                 </div>
 
@@ -538,12 +559,16 @@
 
             </div>
 
+
         </div>
 
     </section>
 
 
-    <!-- PROMOTION -->
+    <!-- ======================================
+         PROMOTION
+    ======================================= -->
+
     <section class="promotion">
 
         <div>
@@ -570,7 +595,10 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- ======================================
+         CONTACT
+    ======================================= -->
+
     <section id="contact" class="contact">
 
         <div class="contact-content">
@@ -597,7 +625,10 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ======================================
+         FOOTER
+    ======================================= -->
+
     <footer class="footer">
 
         <div class="footer-logo">
@@ -611,7 +642,10 @@
     </footer>
 
 
-    <!-- PANIER -->
+    <!-- ======================================
+         PANIER
+    ======================================= -->
+
     <div id="cartPanel" class="cart-panel">
 
         <div class="cart-header">
@@ -657,9 +691,16 @@
     </div>
 
 
-    <!-- OVERLAY -->
+    <!-- ======================================
+         OVERLAY
+    ======================================= -->
+
     <div id="overlay" class="overlay"></div>
 
+
+    <!-- ======================================
+         JAVASCRIPT
+    ======================================= -->
 
     <script src="script.js"></script>
 

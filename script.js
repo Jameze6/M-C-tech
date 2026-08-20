@@ -464,3 +464,44 @@ setTimeout(() => {
         }, 700);
     }
 }, 36000);
+// =========================================================
+// FILTRE DES CATÉGORIES
+// =========================================================
+
+const categoryCards = document.querySelectorAll(".category-card");
+const productCards = document.querySelectorAll(".product-card");
+
+categoryCards.forEach(category => {
+
+    category.addEventListener("click", () => {
+
+        const selectedCategory = category.dataset.category;
+
+        productCards.forEach(product => {
+
+            const productCategory = product.dataset.category;
+
+            if (productCategory === selectedCategory) {
+
+                product.style.display = "block";
+
+            } else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+        // Faire défiler automatiquement vers les produits
+        const productsSection = document.querySelector("#produits");
+
+        if (productsSection) {
+            productsSection.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+    });
+
+});
